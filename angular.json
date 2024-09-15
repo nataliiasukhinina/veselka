@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "va",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -20,9 +20,7 @@
             "outputPath": "dist/veselka",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js", "@angular/localize/init"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -32,6 +30,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -85,7 +84,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
@@ -96,12 +96,36 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "veselka:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "."],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "veselka:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "."],
+            "outputDir": "storybook-static"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "aabcdf8f-4b2a-4a22-8fa6-1cbf85689663"
   }
 }
