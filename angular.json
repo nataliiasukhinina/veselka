@@ -35,7 +35,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
@@ -90,10 +91,7 @@
             "buildTarget": "veselka:build",
             "format": "xlf",
             "outputPath": "src/locale",
-            "targetFiles": [
-              "messages.uk.xlf",
-              "messages.es.xlf"
-            ]
+            "targetFiles": ["messages.uk.xlf", "messages.es.xlf"]
           }
         },
         "test": {
