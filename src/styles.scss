@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+/* Bootstrap overrides */
+
+.bg-dark {
+    // background-color: $indigo-900;
+    background-color: #06AED5;
+} 
+
+$theme-colors: (
+    "primary": #086788,
+    "secondary": #FFF1D0,
+    "danger": #DD1C1A,
+    "warning": #F0C808,
+    "info": #06AED5
+);
