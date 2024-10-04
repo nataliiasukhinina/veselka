@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6171574429973790031" datatype="html">
+        <source>List of Veselka Events</source>
+        <target>Список пісень</target>
+      </trans-unit>
+      <trans-unit id="1626421400849740477" datatype="html">
+        <source>Future events</source>
+        <target state="new">Future events</target>
+      </trans-unit>
+      <trans-unit id="6545158778940232592" datatype="html">
+        <source>Past events</source>
+        <target state="new">Past events</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
